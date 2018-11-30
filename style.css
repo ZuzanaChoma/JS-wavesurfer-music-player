@@ -1,0 +1,82 @@
+body{
+	background-color: #190910;
+	font-family: "Verdana","Courier New";
+}
+
+.container{
+	background-color: #3F1629; 
+	display: grid;
+	width: 1000px;
+    height: 600px;
+	position: relative;
+	margin: 20px auto;
+	grid-template: repeat(8, 2fr)/repeat(3, 2fr); 
+	grid-template-areas: "search upload upload"
+						 "search_results song song"
+						 "search_results songwave songwave"
+						 "search_results songwave songwave"
+						 "search_results content content"
+						 "search_results content content"
+						 "search_results content content"
+						 "search_results content content";
+	grid-gap: 5px;
+}
+
+
+.box {
+  background-color: #DEC0EA;
+  color: white;
+  
+}
+
+.search {
+  grid-area: search;
+}
+
+.upload {
+	grid-area: upload;
+}
+
+.search_results{
+	grid-area: search_results;
+}
+
+.song{
+	grid-area: song;
+}
+
+.songwave{
+	grid-area: songwave;
+}
+
+.content{
+	grid-area: content;
+}
+
+.inputaudio {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputaudio + label {
+    color: white;
+    background-color: #7b4087;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #5e2e68;
+    display: inline-block;
+
+}
+
+.inputaudio:focus + label,
+.inputaudio + label:hover {
+    background-color: #5e2e68;
+}
+
+.inputaudio + label {
+	cursor: pointer; /* "hand" cursor */
+}
